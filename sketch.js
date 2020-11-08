@@ -8,7 +8,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var particles = [];
-var plinkos = [];
+var plinkos = []
 var divisions = [];
 
 var divisionHeight = 300;
@@ -21,9 +21,9 @@ function setup() {
   world = engine.world;
   
   ground = new Ground(240,790,480,20);
-  division = new Division(240, 770, 480, 30);
+  division = new Divisions(240, 770, 480, 30);
   for (var k = 0; k <=innerWidth; k = k+80){
-    divisions.push(newDivisions(k,height-divisionHeight/2, 10, divisonHeight));
+    divisions.push(new Divisions(k,height-divisionHeight/2, 10, divisionHeight));
   }
   
 }
@@ -34,7 +34,7 @@ function draw() {
 
   ground.display();
   division.display();
-  divisions.display();
+//  divisions.display();
    
   drawSprites();
 }
